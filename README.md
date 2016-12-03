@@ -1,7 +1,7 @@
 # Git-Commit-Linter
 Bash script to lint git staged files
 
-You can call `linters.sh` this bash file on `.git/hooks/pre-commit`. It will be run when you run `git commit`.
+You can call `linters.sh` on `.git/hooks/pre-commit`. It will be run when you run `git commit`.
 
 You must install every linter you need by yourself. And add the linter command and file extension on `linter.sh`.
 
