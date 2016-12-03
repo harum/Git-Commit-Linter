@@ -1,4 +1,4 @@
-# run_linters.sh
+# linters.sh
 linter_list=( coffeelint haml-lint rubocop scss-lint )
 extension_list=( coffee haml rb scss )
 index_length=`expr ${#linter_list[@]} - 1`
