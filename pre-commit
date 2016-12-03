@@ -1,0 +1,12 @@
+#!/bin/sh
+#add this to your  .git/hooks/pre-commit
+
+git stash -q --keep-index
+
+#depend on your file location
+sh ~/git-linter/linters.sh
+
+RESULT=$?
+git stash pop -q
+[ $RESULT -ne 0 ] && exit 1
+exit 0
