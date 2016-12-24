@@ -6,7 +6,7 @@ error_lint_count=0
 
 for index in `seq 0 $index_length`; do
   file_ext="\.(""${extension_list[$index]}"")(\..+)?$"
-  diff_list=`git diff --cached --name-only | grep -E $file_ext`
+  diff_list=`git diff --cached --name-only --diff-filter=AMC | grep -E $file_ext`
   linter=${linter_list[$index]}
 
   for diff in $diff_list; do
